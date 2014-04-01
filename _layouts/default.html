@@ -12,24 +12,14 @@
         <!-- Custom CSS -->
         <link rel="stylesheet" href="/css/main.css">
 
-    </head>
+        <!-- Font Awesome From CDN -->
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+      </head>
     <body>
-
-        <div class="site">
+      <div class="site">
           {% include header.html %}
           {{ content }}
-
-          <div class="footer">
-            <div class="contact">
-              <p>
-              {{ site.data.config.owner }}<br />
-              {{ site.data.config.position }}<br />
-              {{ site.data.config.email }}
-              </p>
-            </div>
-            {% include footer.html %}
-          </div>
+          {% include footer.html %}
         </div>
-
     </body>
 </html>
