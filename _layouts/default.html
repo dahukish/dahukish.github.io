@@ -16,28 +16,18 @@
     <body>
 
         <div class="site">
-          <div class="header">
-            <h1 class="title"><a href="/">{{ site.name }}</a></h1>
-            <a class="extra" href="/">home</a>
-          </div>
-
+          {% include header.html %}
           {{ content }}
 
           <div class="footer">
             <div class="contact">
               <p>
-              Stephen Hukish<br />
-              Web Developer/Designer<br />
-              stephen.hukish@gmail.com
+              {{ site.data.config.owner }}<br />
+              {{ site.data.config.position }}<br />
+              {{ site.data.config.email }}
               </p>
             </div>
-            <div class="contact">
-              <p>
-                <a href="https://github.com/dahukish">github.com/dahukish</a><br />
-                <a href="https://twitter.com/stephenhukish">twitter.com/stephenhukish</a><br />
-                <a href="https://twitter.com/stephenhukish">twitter.com/stephenhukish</a><br />
-              </p>
-            </div>
+            {% include footer.html %}
           </div>
         </div>
 
