@@ -6,14 +6,14 @@ notify = require 'gulp-notify'
 exec = require('child_process').exec
 sys = require 'sys'
 
-lessDir = '_assets/sass'
+sassDir = '_assets/sass'
 coffeeDir = '_assets/coffee'
-targetCssDir = 'css/min'
-targetJsDir = 'js/min'
+targetCssDir = 'css'
+targetJsDir = 'js'
 
 gulp.task 'sass', ->
-  gulp.src lessDir + '/**/*.scss'
-  .pipe less().on 'error', gutil.log
+  gulp.src sassDir + '/**/*.scss'
+  .pipe sass({ sourcemap: true, style: 'compressed' }).on 'error', gutil.log
   .pipe gulp.dest(targetCssDir)
   .pipe notify('Compiled Sass Files')
 
@@ -24,8 +24,8 @@ gulp.task 'coffee', ->
   .pipe notify('Compiled CoffeeScript Files')
 
 gulp.task 'watch', ->
-  gulp.watch lessDir + '/**/*.less', ['less']
+  gulp.watch sassDir + '/**/*.scss', ['sass']
   gulp.watch coffeeDir + '/**/*.coffee', ['coffee']
 
-gulp.task 'default', ['less', 'coffee', 'watch'], ->
+gulp.task 'default', ['sass', 'coffee', 'watch'], ->
   notify 'Running default task'
