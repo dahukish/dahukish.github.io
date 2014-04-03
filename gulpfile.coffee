@@ -12,8 +12,8 @@ targetCssDir = 'css'
 targetJsDir = 'js'
 
 gulp.task 'sass', ->
-  gulp.src sassDir + 'main.scss'
-  .pipe sass({ sourcemap: true, style: 'compressed' }).on 'error', gutil.log
+  gulp.src sassDir + '/main.scss'
+  .pipe sass({ sourcemap: true, style: 'nested'}).on 'error', gutil.log
   .pipe gulp.dest(targetCssDir)
   .pipe notify('Compiled Sass Files')
 

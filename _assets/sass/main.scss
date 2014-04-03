@@ -1,13 +1,29 @@
 @import 'reset';
+@import 'bourbon/bourbon';
+@import 'neat/neat';
 @import 'variables';
-@import 'bourbon';
-@import 'neat';
 
 /*****************************************************************************/
 /*
-/* Common
+/* Site Structure
 /*
 /*****************************************************************************/
+
+html, body {
+  background-color: $outer_back;
+  // width: 100%;
+  // height: 100%;
+
+}
+
+// html {
+//   overflow: hidden;
+// }
+//
+// body {
+//   position: absolute;
+//   overflow: auto;
+// }
 
 /*****************************************************************************/
 /*
@@ -36,70 +52,132 @@
 /*****************************************************************************/
 
 .site {
+  @include outer-container;
+  @include clearfix;
+  @include omega();
+  position: relative;
   font-size: 115%;
   text-align: justify;
-  width: 42em;
-  margin: 3em auto 2em;
+  width: $site_width;
+  min-height:100%;
+  margin: 0 auto 2em;
   line-height: 1.5em;
+  background-color: $inner_back;
+  padding-bottom: 10em;
+
+
+  header {
+
+    @include span-columns(12);
+    background-color: #f00;
+    padding: 2em 0 0;
+
+    a {
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    nav {
+      @include span-columns(12);
+      background-color: #00f;
+      padding: 0.75em 1em;
+    }
+
+  }
+
+  .title {
+    display: inline-block;
+    margin: 2em;
+
+    a {
+      font-size: $large_header_size;
+      color: #a00;
+      &:hover {
+        color: #000;
+      }
+    }
+  }
+
+  header a.extra {
+    color: #aaa;
+    margin-left: 1em;
+  }
+
+  header a.extra:hover {
+    color: #000;
+  }
+
+  .meta {
+    color: #aaa;
+  }
+
+  .content {
+    @include span-columns(9);
+    padding: 3em 2em 1em;
+  }
+
+  .sidebar {
+    @include span-columns(3);
+    @include omega();
+
+    ul {
+      @include span-columns(12);
+      margin-top: 3em;
+
+      li {
+        list-style: none;
+      }
+    }
+  }
+
+  footer {
+    @include span-columns(12);
+    position: absolute;
+    bottom: 0;
+    padding: 1em 2em;
+    font-size: 80%;
+    color: #666;
+    border-top: 4px solid #eee;
+    margin-top: 2em;
+    overflow: hidden;
+  }
+
+  footer .contact {
+    float: left;
+    margin-right: 3em;
+  }
+
+  footer .contact a {
+    color: #8085C1;
+  }
+
+  footer .rss {
+    margin-top: 1.1em;
+    margin-right: -.2em;
+    float: right;
+  }
+
+  footer .rss img {
+    border: 0;
+  }
+
+
+  @include media($small) {
+    nav {
+      background-color: #0f0 !important;
+    }
+  }
+
+  @include media($mobile) {
+    nav {
+      display: none !important;
+    }
+  }
+
 }
 
-header a {
-  font-weight: bold;
-  text-decoration: none;
-}
 
-.title {
-  display: inline-block;
-  margin-bottom: 2em;
-}
 
-.title a {
-  color: #a00;
-}
-
-.title a:hover {
-  color: #000;
-}
-
-header a.extra {
-  color: #aaa;
-  margin-left: 1em;
-}
-
-header a.extra:hover {
-  color: #000;
-}
-
-.meta {
-  color: #aaa;
-}
-
-footer {
-  font-size: 80%;
-  color: #666;
-  border-top: 4px solid #eee;
-  margin-top: 2em;
-  overflow: hidden;
-}
-
-footer .contact {
-  float: left;
-  margin-right: 3em;
-}
-
-footer .contact a {
-  color: #8085C1;
-}
-
-footer .rss {
-  margin-top: 1.1em;
-  margin-right: -.2em;
-  float: right;
-}
-
-footer .rss img {
-  border: 0;
-}
 
 /*****************************************************************************/
 /*
