@@ -1,11 +1,12 @@
 /* colours */
-$primary-blue: #849BE3;
+$primary-blue: #6278BF;
 $darker-primary: darken( $primary-blue, 20% );
 $lighter-primary: lighten( $primary-blue, 10% );
 $lightest-primary: lighten( $primary-blue, 20% );
+$off-white-primary: lighten( $primary-blue, 40% );
 $primary-complement: #E3CC84;
 $darker-complement: darken( $primary-complement, 20% );
-$lighter-complement: lighten( $primary-complement, 20% );
+$lighter-complement: lighten( $primary-complement, 25% );
 $left_back: lighten( desaturate( $primary-blue, 10% ), 5% );
 $right_back: #fff;
 

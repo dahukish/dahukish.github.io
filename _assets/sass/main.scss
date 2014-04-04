@@ -54,14 +54,14 @@ html, body {
 
 .site {
   @include outer-container;
+  @include clearfix;
   position: relative;
   font-size: 115%;
   color: $primary_side_font_color;
   text-align: justify;
   max-width: $site_width;
   min-height: 100%;
-  height: 100%;
-  margin: 0 auto 2em;
+  margin: 0 auto;
   line-height: 1.5em;
   background-color: $right_back;
   border-left: 1.25em solid $lightest-primary;
@@ -119,6 +119,67 @@ html, body {
     @include span-columns(8);
     @include omega();
     padding: 3em 2em 1em;
+    color: $primary-blue;
+
+    h1 {
+      font-size: 140%;
+      border-bottom: 0.10em solid $lightest-primary;
+      margin-bottom: 1em;
+      color: $darker-primary;
+
+      .btm-border {
+        display: block;
+        padding-bottom: 0.5em;
+        border-bottom: 0.10em solid $lighter-primary;
+      }
+    }
+
+    article {
+      margin-top: 1em;
+      padding: 1em 0;
+
+      h1 {
+        @include span-columns(12);
+        padding: 0.75em;
+        background-color: $off-white-primary;
+        border: none;
+        border-left: 0.25em solid $primary-blue;
+        font-size:100%;
+        margin-bottom: 1em;
+        color: $darker-primary;
+
+        i {
+          margin-left: 1em;
+          color: $primary-blue;
+        }
+
+        span {
+          padding: 0;
+          border: none;
+        }
+
+      }
+
+      .date {
+          margin-left: 1em;
+          font-size: 90%;
+          color: $primary-blue;
+
+      }
+
+      a {
+        text-decoration: none;
+        color: $darker-primary;
+        &.more {
+          margin-left: 0.75em;
+          font-weight: 600;
+        }
+        &:hover {
+          color: $primary-blue;
+        }
+      }
+    }
+
   }
 
   .sidebar {

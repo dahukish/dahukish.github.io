@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>{{ page.title }}</title>
+        <title>Stephen Hukish{% if page.title %}:{{ page.title }}{% endif %}</title>
         <meta name="viewport" content="width=device-width">
 
         <!-- syntax highlighting CSS -->
@@ -19,6 +19,16 @@
       <div class="site">
           {% include sidenav.html %}
           <section class="content" role="main">
+            <h1 class="content-title">
+              <span class="btm-border">
+                <i class="fa fa-terminal"></i>
+                {% if page.title %}
+                  {{ page.title }}
+                {% else %}
+                  My Thoughts&hellip;
+                {% endif %}
+              </span>
+            </h1>
             {{ content }}
           </section>
       </div>
