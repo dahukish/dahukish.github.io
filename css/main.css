@@ -80,6 +80,7 @@ html, body {
   text-align: justify;
   max-width: 80em;
   min-height: 100%;
+  height: auto;
   margin: 0 auto;
   line-height: 1.5em;
   background-color: white;
@@ -136,6 +137,7 @@ html, body {
     display: block;
     margin-right: 2.35765%;
     width: 65.88078%;
+    margin-left: 34.11922%;
     margin-right: 0;
     padding: 3em 2em 1em;
     color: #6278bf; }
@@ -190,8 +192,10 @@ html, body {
     display: block;
     margin-right: 2.35765%;
     width: 31.76157%;
-    position: relative;
-    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
     background-color: #7e8dbd;
     border-left: 1.25em solid #8697ce; }
     .site .sidebar:last-child {
