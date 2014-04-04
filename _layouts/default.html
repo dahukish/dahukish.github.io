@@ -17,20 +17,10 @@
       </head>
     <body>
       <div class="site">
-          {% include header.html %}
+          {% include sidenav.html %}
           <section class="content" role="main">
             {{ content }}
           </section>
-          <section class="sidebar" role="complementary">
-            <ul>
-            {% for category in site.categories %}
-              <li>
-                <i class="fa fa-arrow-circle-o-right"></i><a href="/{{ category | first | slugize }}">{{ category | first }}</a>
-              </li>
-            {% endfor %}
-            </ul>
-          </section>
-          {% include footer.html %}
-        </div>
+      </div>
     </body>
 </html>

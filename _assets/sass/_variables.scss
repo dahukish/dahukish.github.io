@@ -1,8 +1,24 @@
-$outer_back: #ccc;
-$inner_back: #fff;
-$site_width: 70em;
-$large_header_size: 4em;
-$large_header_size_mobile: 2em;
+/* colours */
+$primary-blue: #849BE3;
+$darker-primary: darken( $primary-blue, 20% );
+$lighter-primary: lighten( $primary-blue, 10% );
+$lightest-primary: lighten( $primary-blue, 20% );
+$primary-complement: #E3CC84;
+$darker-complement: darken( $primary-complement, 20% );
+$lighter-complement: lighten( $primary-complement, 20% );
+$left_back: lighten( desaturate( $primary-blue, 10% ), 5% );
+$right_back: #fff;
 
-$small: new-breakpoint(max-width 500px 6);
-$mobile: new-breakpoint(max-width 350px 6);
+$primary_side_font_color: #fff;
+$primary_side_font_color_hover: $lightest-primary;
+
+/* sizes */
+$site_width: 80em;
+$large_header_size: dynamic_font_size(1.75em);
+$large_header_size_medium: dynamic_font_size(1.75em);
+$large_header_size_mobile: dynamic_font_size(1.75em);
+
+/* breakpoints */
+$medium: new-breakpoint(max-width 750px 12);
+$small: new-breakpoint(max-width 550px 6);
+$mobile: new-breakpoint(max-width 386px 6);

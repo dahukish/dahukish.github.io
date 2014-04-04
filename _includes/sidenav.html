@@ -1,0 +1,18 @@
+<section class="sidebar" role="complementary">
+  <header role="banner">
+    <h1 class="title"><a href="/"><i class="fa fa-terminal"></i>{{ site.data.config.name }}</a></h1>
+    <nav role="navigation">
+      <a class="extra" href="/">home</a>
+      <a class="extra" href="/about">about</a>
+      <a class="extra" href="/work-examples">work examples</a>
+    </nav>
+  </header>
+  <ul>
+  {% for category in site.categories %}
+    <li>
+      <i class="fa fa-arrow-circle-o-right"></i><a href="/{{ category | first | slugize }}">{{ category | first }}</a>
+    </li>
+  {% endfor %}
+  </ul>
+  {% include footer.html %}
+</section>

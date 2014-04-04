@@ -1,0 +1,3 @@
+@function dynamic_font_size($ems) {
+  @return ($ems / $site_width) * 100em;
+}
