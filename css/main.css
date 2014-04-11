@@ -350,4 +350,43 @@ html, body {
 .post ul, .post ol {
   margin-left: 1.35em; }
 
+/*****************************************************************************/
+/*
+/* Work Examples
+/*
+/*****************************************************************************/
+.site .content .example {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%; }
+  .site .content .example:last-child {
+    margin-right: 0; }
+  .site .content .example ul {
+    padding: 0; }
+    .site .content .example ul li {
+      list-style: none;
+      padding: 0;
+      margin: 0; }
+  .site .content .example .column {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%;
+    padding: 2.35765%;
+    padding-left: 0; }
+    .site .content .example .column:last-child {
+      margin-right: 0; }
+  .site .content .example.example-print ul li {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 23.23176%; }
+    .site .content .example.example-print ul li:last-child {
+      margin-right: 0; }
+    .site .content .example.example-print ul li:nth-child(4n) {
+      margin-right: 0; }
+    .site .content .example.example-print ul li:nth-child(4n+1) {
+      clear: left; }
+
 /*# sourceMappingURL=main.css.map */

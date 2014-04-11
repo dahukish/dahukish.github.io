@@ -441,3 +441,51 @@ html, body {
 .post ul, .post ol {
   margin-left: 1.35em;
 }
+
+
+
+/*****************************************************************************/
+/*
+/* Work Examples
+/*
+/*****************************************************************************/
+
+.site {
+  .content {
+    .example {
+      @include span-columns(12);
+
+      ul {
+        padding: 0;
+        li {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+        }
+      }
+
+      .column {
+        @include span-columns(6);
+        @include pad();
+        padding-left: 0;
+
+        &.column-left {
+        }
+
+        &.column-right {
+        }
+
+      }
+
+      &.example-print {
+        ul {
+          li {
+            @include span-columns(3);
+            @include omega(4n);
+          }
+        }
+      }
+
+    }
+  }
+}
