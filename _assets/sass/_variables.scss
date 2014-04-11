@@ -5,6 +5,7 @@ $lighter-primary: lighten( $primary-blue, 10% );
 $lightest-primary: lighten( $primary-blue, 20% );
 $off-white-primary: lighten( $primary-blue, 40% );
 $primary-complement: #E3CC84;
+$darkest-complement: darken( $primary-complement, 30% );
 $darker-complement: darken( $primary-complement, 20% );
 $lighter-complement: lighten( $primary-complement, 25% );
 $left_back: lighten( desaturate( $primary-blue, 10% ), 5% );
@@ -15,11 +16,9 @@ $primary_side_font_color_hover: $lightest-primary;
 
 /* sizes */
 $site_width: 80em;
-$large_header_size: dynamic_font_size(1.75em);
-$large_header_size_medium: dynamic_font_size(1.75em);
-$large_header_size_mobile: dynamic_font_size(1.75em);
+$large_header_size: dynamic_font_size(1.25em);
+$large_header_size_mobile: dynamic_font_size(1.25em);
 
 /* breakpoints */
-$medium: new-breakpoint(max-width 750px 12);
-$small: new-breakpoint(max-width 550px 6);
-$mobile: new-breakpoint(max-width 386px 6);
+$small: new-breakpoint(max-width 780px 6);
+$mobile: new-breakpoint(max-width 500px 6);

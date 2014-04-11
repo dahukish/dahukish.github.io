@@ -90,6 +90,7 @@ html, body {
 
     .title {
       display: inline-block;
+      white-space: nowrap;
       margin: 2em;
 
       a {
@@ -113,7 +114,7 @@ html, body {
   }
 
   .meta {
-    color: #aaa;
+    color: $darker-complement;
   }
 
   .content {
@@ -124,7 +125,7 @@ html, body {
     color: $primary-blue;
 
     h1 {
-      font-size: 140%;
+      font-size: 120%;
       border-bottom: 0.10em solid $lightest-primary;
       margin-bottom: 1em;
       color: $darker-primary;
@@ -182,6 +183,35 @@ html, body {
       }
     }
 
+    p {
+      a {
+        color: $primary-blue;
+        text-decoration: none;
+        font-weight: 600;
+
+        &:hover {
+          color: $darker-complement;
+          text-decoration: underline;
+        }
+      }
+    }
+
+    blockquote {
+      color: $primary_side_font_color;
+      background-color: $lightest-primary;
+      border: 1px solid $primary-blue;
+      padding: 1em;
+    }
+
+    .highlight {
+      background-color: $lighter-complement;
+      padding: 1em;
+      border: 1px solid $primary-complement;
+      .lineno {
+        color: $darkest-complement;
+      }
+    }
+
   }
 
   .sidebar {
@@ -233,7 +263,12 @@ html, body {
       font-size: 110%;
 
       span {
-        margin-left: 1em;
+        display: inline-block;
+        white-space: nowrap;
+        i {
+          padding-right: 1em;
+        }
+
       }
 
     }
@@ -259,42 +294,135 @@ html, body {
   }
 
 
-
-  @include media($medium) {
-    width: 100%;
-
-    header {
-      .title {
-        a {
-          font-size: $large_header_size_medium;
-        }
-      }
-    }
-
-  }
-
   @include media($small) {
-    nav {
-      background-color: #0f0 !important;
-    }
-  }
 
-  @include media($mobile) {
     header {
-      .title {
-        a {
-          font-size: $large_header_size_mobile;
-        }
+      nav {
+          background-color: $lighter-primary;
+          a {
+            width: auto;
+          }
       }
     }
 
     .content {
       @include span-columns(6);
+      @include shift(0);
+      padding-bottom: 20em;
     }
 
     .sidebar {
       @include span-columns(6);
+      position: static;
+
+      ul {
+        margin-top: 0.75em;
+        margin-bottom: 0.75em;
+        padding-right: 3em;
+
+        li {
+          display: inline-block;
+          a {
+            margin-left: 0.45em;
+          }
+        }
+      }
+
+      footer {
+        position: absolute;
+        bottom: 0;
+        background-color: $left_back;
+        margin-left: -1.50em;
+      }
+
     }
+  }
+
+
+  @include media($mobile) {
+
+    min-width: 380px;
+    border: none;
+
+    .sidebar {
+      border: none;
+
+      footer {
+        margin: 0;
+      }
+    }
+
+    .content {
+      padding: 2em 0 21em;
+
+       h1 {
+          .btm-border {
+            i {
+              margin-left: 1.65em;
+            }
+          }
+        }
+
+      h2 {
+        margin-left: 1.65em;
+      }
+
+      article {
+          h1 {
+            border: 0;
+            a {
+              margin-left: 1em;
+            }
+
+          }
+
+      }
+
+      p {
+        padding: 0 1.75em;
+      }
+
+      blockquote {
+        background-color: $lightest-primary;
+        border: none;
+        border-top: 1px solid $primary-blue;
+        border-bottom: 1px solid $primary-blue;
+        padding: 1.75em;
+
+        p {
+          padding: 0;
+          margin: 0;
+        }
+      }
+
+      .highlight {
+        padding: 1em 1.75em;
+        border: none;
+        border-top: 1px solid $primary-complement;
+        border-bottom: 1px solid $primary-complement;
+      }
+
+    }
+
+
+    // .content {
+    //   @include span-columns(6);
+    //   @include shift(0);
+    //   padding-bottom: 20em;
+    // }
+    //
+    // .sidebar {
+    //   @include span-columns(6);
+    //   position: static;
+    //
+    //   footer {
+    //     position: absolute;
+    //     bottom: 0;
+    //     background-color: $left_back;
+    //     margin-left: -1.50em;
+    //   }
+    //
+    // }
 
   }
 
@@ -310,33 +438,6 @@ html, body {
 /*****************************************************************************/
 
 /* standard */
-.post pre {
-  border: 1px solid #ddd;
-  background-color: #eef;
-  padding: 0 .4em;
-}
-
 .post ul, .post ol {
   margin-left: 1.35em;
-}
-
-.post code {
-  border: 1px solid #ddd;
-  background-color: #eef;
-  padding: 0 .2em;
-}
-
-.post pre code {
-  border: none;
-}
-
-/* terminal */
-.post pre.terminal {
-  border: 1px solid #000;
-  background-color: #333;
-  color: #FFF;
-}
-
-.post pre.terminal code {
-  background-color: #333;
 }

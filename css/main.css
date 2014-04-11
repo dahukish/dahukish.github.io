@@ -119,9 +119,10 @@ html, body {
         width: 100%; }
     .site header .title {
       display: inline-block;
+      white-space: nowrap;
       margin: 2em; }
       .site header .title a {
-        font-size: 2.1875em;
+        font-size: 1.5625em;
         color: white; }
         .site header .title a:hover {
           color: #aab6dd; }
@@ -131,7 +132,7 @@ html, body {
       .site header a.extra:hover {
         color: #aab6dd; }
   .site .meta {
-    color: #aaa; }
+    color: #d0aa31; }
   .site .content {
     float: left;
     display: block;
@@ -144,7 +145,7 @@ html, body {
     .site .content:last-child {
       margin-right: 0; }
     .site .content h1 {
-      font-size: 140%;
+      font-size: 120%;
       border-bottom: 0.1em solid #aab6dd;
       margin-bottom: 1em;
       color: #364985; }
@@ -187,6 +188,24 @@ html, body {
           font-weight: 600; }
         .site .content article a:hover {
           color: #6278bf; }
+    .site .content p a {
+      color: #6278bf;
+      text-decoration: none;
+      font-weight: 600; }
+      .site .content p a:hover {
+        color: #d0aa31;
+        text-decoration: underline; }
+    .site .content blockquote {
+      color: white;
+      background-color: #aab6dd;
+      border: 1px solid #6278bf;
+      padding: 1em; }
+    .site .content .highlight {
+      background-color: #fbf7ec;
+      padding: 1em;
+      border: 1px solid #e3cc84; }
+      .site .content .highlight .lineno {
+        color: #a88826; }
   .site .sidebar {
     float: left;
     display: block;
@@ -237,7 +256,10 @@ html, body {
       margin-right: 3em;
       font-size: 110%; }
       .site .sidebar footer .contact span {
-        margin-left: 1em; }
+        display: inline-block;
+        white-space: nowrap; }
+        .site .sidebar footer .contact span i {
+          padding-right: 1em; }
     .site .sidebar footer .contact a {
       color: white;
       text-decoration: none; }
@@ -249,31 +271,75 @@ html, body {
       float: right; }
     .site .sidebar footer .rss img {
       border: 0; }
-  @media screen and (max-width: 750px) {
-    .site {
-      width: 100%; }
-      .site header .title a {
-        font-size: 2.1875em; } }
-  @media screen and (max-width: 550px) {
-    .site nav {
-      background-color: #0f0 !important; } }
-  @media screen and (max-width: 386px) {
-    .site header .title a {
-      font-size: 2.1875em; }
+  @media screen and (max-width: 780px) {
+    .site header nav {
+      background-color: #8697ce; }
+      .site header nav a {
+        width: auto; }
     .site .content {
       float: left;
       display: block;
       margin-right: 4.82916%;
-      width: 100%; }
+      width: 100%;
+      margin-left: 0%;
+      padding-bottom: 20em; }
       .site .content:last-child {
         margin-right: 0; }
     .site .sidebar {
       float: left;
       display: block;
       margin-right: 4.82916%;
-      width: 100%; }
+      width: 100%;
+      position: static; }
       .site .sidebar:last-child {
-        margin-right: 0; } }
+        margin-right: 0; }
+      .site .sidebar ul {
+        margin-top: 0.75em;
+        margin-bottom: 0.75em;
+        padding-right: 3em; }
+        .site .sidebar ul li {
+          display: inline-block; }
+          .site .sidebar ul li a {
+            margin-left: 0.45em; }
+      .site .sidebar footer {
+        position: absolute;
+        bottom: 0;
+        background-color: #7e8dbd;
+        margin-left: -1.50em; } }
+  @media screen and (max-width: 500px) {
+    .site {
+      min-width: 380px;
+      border: none; }
+      .site .sidebar {
+        border: none; }
+        .site .sidebar footer {
+          margin: 0; }
+      .site .content {
+        padding: 2em 0 21em; }
+        .site .content h1 .btm-border i {
+          margin-left: 1.65em; }
+        .site .content h2 {
+          margin-left: 1.65em; }
+        .site .content article h1 {
+          border: 0; }
+          .site .content article h1 a {
+            margin-left: 1em; }
+        .site .content p {
+          padding: 0 1.75em; }
+        .site .content blockquote {
+          background-color: #aab6dd;
+          border: none;
+          border-top: 1px solid #6278bf;
+          border-bottom: 1px solid #6278bf;
+          padding: 1.75em; }
+          .site .content blockquote p {
+            padding: 0;
+            margin: 0; }
+        .site .content .highlight {
+          padding: 1em 1.75em;
+          border: none;
+          border-top: 1px solid #e3cc84;
+          border-bottom: 1px solid #e3cc84; } }
 
 /*****************************************************************************/
 /*
@@ -281,29 +347,7 @@ html, body {
 /*
 /*****************************************************************************/
 /* standard */
-.post pre {
-  border: 1px solid #ddd;
-  background-color: #eef;
-  padding: 0 .4em; }
-
 .post ul, .post ol {
   margin-left: 1.35em; }
-
-.post code {
-  border: 1px solid #ddd;
-  background-color: #eef;
-  padding: 0 .2em; }
-
-.post pre code {
-  border: none; }
-
-/* terminal */
-.post pre.terminal {
-  border: 1px solid #000;
-  background-color: #333;
-  color: #FFF; }
-
-.post pre.terminal code {
-  background-color: #333; }
 
 /*# sourceMappingURL=main.css.map */
