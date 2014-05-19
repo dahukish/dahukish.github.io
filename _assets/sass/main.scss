@@ -3,6 +3,7 @@
 @import 'neat/neat';
 @import 'functions';
 @import 'variables';
+@import 'old_css';
 
 /*****************************************************************************/
 /*
@@ -404,6 +405,26 @@ html, body {
 
     }
 
+    .example {
+
+      .column {
+
+        &.column-left {
+        }
+
+        &.column-right {
+        }
+
+      }
+
+      &.example-print {
+        ul {
+          margin-left: 1.75em;
+          li {
+          }
+        }
+      }
+    }
 
     // .content {
     //   @include span-columns(6);
@@ -478,14 +499,57 @@ html, body {
       }
 
       &.example-print {
+        margin-top: 0;
         ul {
+          @include clearfix;
+          width: 100%;
+
           li {
-            @include span-columns(3);
-            @include omega(4n);
+            width: 178px;
+            margin-bottom: 0.60em;
+            float: left;
+
+            a {
+                float:left;
+                display: block;
+                img {
+                  border: 0.25em solid $primary-blue;
+                  display: block;
+                  width: 170px;
+                  height: 150px;
+                  &:hover {
+                    border: 0.25em solid $darker-primary;
+                  }
+                }
+            }
+
           }
         }
       }
 
     }
+  }
+}
+
+/* fancybox overrides */
+body {
+  #fancybox-wrap {
+      #fancybox-outer {
+          #fancybox-close {
+            right: -3.5em;
+            top: -1.75em;
+          }
+      }
+
+      #fancybox-left {
+        #fancybox-left-ico {
+        }
+      }
+
+      #fancybox-right {
+        right: -1.65em;
+        #fancybox-right-ico {
+        }
+      }
   }
 }

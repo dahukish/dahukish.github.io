@@ -3,6 +3,7 @@ layout: post
 title:  "This is another test post"
 date:   2014-04-04 13:49:31
 categories: tamriel
+comments: True
 ---
 
 You'll find this post in your `_posts` directory - edit this post and re-build (or run with the `-w` switch) to see your changes!
@@ -22,3 +23,5 @@ Check out the [Jekyll docs][jekyll] for more info on how to get the most out of 
 
 [jekyll-gh]: https://github.com/mojombo/jekyll
 [jekyll]:    http://jekyllrb.com
+
+{% include comments.html %}
