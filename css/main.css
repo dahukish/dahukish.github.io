@@ -894,6 +894,21 @@ html, body {
       padding-bottom: 20em; }
       .site .content:last-child {
         margin-right: 0; }
+      .site .content .example.example-web .column {
+        float: none;
+        width: 100%; }
+      .site .content .example.example-web .column.column-left h2 {
+        float: left;
+        margin-top: 1em;
+        width: 100%; }
+      .site .content .example.example-web .column.column-left p {
+        margin: 0 0 1em 0;
+        float: left; }
+      .site .content .example.example-web a {
+        float: left; }
+        .site .content .example.example-web a img {
+          width: 100px;
+          height: 150px; }
     .site .sidebar {
       float: left;
       display: block;
@@ -924,7 +939,7 @@ html, body {
         .site .sidebar footer {
           margin: 0; }
       .site .content {
-        padding: 2em 0 21em; }
+        padding: 2em 0 18em; }
         .site .content h1 .btm-border i {
           margin-left: 1.65em; }
         .site .content h2 {
@@ -949,6 +964,12 @@ html, body {
           border: none;
           border-top: 1px solid #e3cc84;
           border-bottom: 1px solid #e3cc84; }
+      .site .example .column {
+        margin-left: 1.75em; }
+        .site .example .column h2 {
+          margin: 0; }
+        .site .example .column.column-left p {
+          padding: 0 2.5em 0 0; }
       .site .example.example-print ul {
         margin-left: 1.75em; } }
 
@@ -973,8 +994,30 @@ html, body {
   width: 100%; }
   .site .content .example:last-child {
     margin-right: 0; }
+  .site .content .example .background-image {
+    text-indent: -999em;
+    width: 100%;
+    height: 100px;
+    overflow: hidden; }
+    .site .content .example .background-image.spaces2grow {
+      background-image: url("/img/spaces2grow.jpg"); }
+    .site .content .example .background-image.lifelearn {
+      background-image: url("/img/lifelearn.jpg"); }
+    .site .content .example .background-image.monji {
+      background-image: url("/img/monjigame.jpg"); }
+    .site .content .example .background-image.headwaters {
+      background-image: url("/img/headwaters.jpg"); }
+    .site .content .example .background-image.treatingpain {
+      background-image: url("/img/treatingpain.jpg"); }
   .site .content .example ul {
+    *zoom: 1;
+    width: 100%;
     padding: 0; }
+    .site .content .example ul:before, .site .content .example ul:after {
+      content: " ";
+      display: table; }
+    .site .content .example ul:after {
+      clear: both; }
     .site .content .example ul li {
       list-style: none;
       padding: 0;
@@ -988,30 +1031,45 @@ html, body {
     padding-left: 0; }
     .site .content .example .column:last-child {
       margin-right: 0; }
+    .site .content .example .column.column-right li {
+      list-style: disc;
+      margin-left: 1em; }
   .site .content .example.example-print {
     margin-top: 0; }
-    .site .content .example.example-print ul {
-      *zoom: 1;
-      width: 100%; }
-      .site .content .example.example-print ul:before, .site .content .example.example-print ul:after {
-        content: " ";
-        display: table; }
-      .site .content .example.example-print ul:after {
-        clear: both; }
-      .site .content .example.example-print ul li {
-        width: 178px;
-        margin-bottom: 0.60em;
-        float: left; }
-        .site .content .example.example-print ul li a {
-          float: left;
-          display: block; }
-          .site .content .example.example-print ul li a img {
-            border: 0.25em solid #6278bf;
-            display: block;
-            width: 170px;
-            height: 150px; }
-            .site .content .example.example-print ul li a img:hover {
-              border: 0.25em solid #364985; }
+    .site .content .example.example-print img {
+      border: 0.25em solid #6278bf;
+      display: block; }
+      .site .content .example.example-print img:hover {
+        border: 0.25em solid #364985; }
+    .site .content .example.example-print ul li {
+      width: 178px;
+      margin-bottom: 0.60em;
+      float: left; }
+      .site .content .example.example-print ul li a {
+        float: left;
+        display: block; }
+        .site .content .example.example-print ul li a img {
+          width: 170px;
+          height: 150px; }
+  .site .content .example.example-web h1 {
+    margin-bottom: 0; }
+  .site .content .example.example-web a {
+    display: block;
+    float: left;
+    width: 100%; }
+    .site .content .example.example-web a img {
+      display: block;
+      float: left;
+      width: 100%;
+      height: 100px;
+      background-color: #f00; }
+  .site .content .example.example-web p a {
+    display: inline;
+    float: none;
+    width: auto; }
+  .site .content .example.example-web .column-left p {
+    text-align: left;
+    margin: 0; }
 
 /* fancybox overrides */
 body #fancybox-wrap #fancybox-outer #fancybox-close {
